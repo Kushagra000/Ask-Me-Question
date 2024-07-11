@@ -6,7 +6,7 @@ const Sidebar = () => {
   return (
     <div className='sidebar'>
         <div className='top'>
-            <img src={assets.menu_icon} onClick={()=>setExtended((prev)=>!prev)} className='menu'/>
+            <img src={assets.menu_icon} onClick={()=>setExtended(prev=>!prev)} className='menu'/>
             <div className='new-chat'>
             
                 <img src={assets.plus_icon} alt=''/>

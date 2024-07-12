@@ -18,19 +18,31 @@ const Main = () => {
                     <p>How Can I help you today?</p>
                 </div>
                     <div className='cards'>
-                        <div className='card'>
+                        <div onClick={()=>{
+                            setInput("Suggest some beautiful places to see on an upcomming road trip");
+                            onSent()
+                        }} className='card'>
                             <p>Suggest some beautiful places to see on an upcomming road trip</p>
                             <img src={assets.compass_icon} />
                         </div>
-                        <div className='card'>
+                        <div onClick={()=>{
+                            setInput("Breifly summarize this concept: urban  planning");
+                            onSent()
+                        }} className='card'>
                             <p>Breifly summarize this concept: urban  planning</p>
                             <img src={assets.bulb_icon} />
                         </div>
-                        <div className='card'>
+                        <div onClick={()=>{
+                            setInput("Brainstrom team bonding  activities for our work retreat");
+                            onSent()
+                        }} className='card'>
                             <p>Brainstrom team bonding  activities for our work retreat</p>
                             <img src={assets.message_icon} />
                         </div>
-                        <div className='card'>
+                        <div onClick={()=>{
+                            setInput("Improve the readability of the following code");
+                            onSent()
+                        }} className='card'>
                             <p>Improve the readability of the following code</p>
                             <img src={assets.code_icon} />
                         </div>
@@ -60,7 +72,8 @@ const Main = () => {
                         <div>
                             <img src={assets.gallery_icon} />
                             <img src={assets.mic_icon} />
-                            <img onClick={() => onSent()} src={assets.send_icon} />
+                            {input&&<img onClick={() => onSent()} src={assets.send_icon} />}
+                            
                         </div>
                     </div>
                     <p className='bottom-info'>

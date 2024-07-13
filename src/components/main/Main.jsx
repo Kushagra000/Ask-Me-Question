@@ -70,8 +70,6 @@ const Main = () => {
                     <div className='search-box'>
                         <input onChange={(e) => setInput(e.target.value)} value={input} type='text' placeholder='Enter a prompt here...' />
                         <div>
-                            <img src={assets.gallery_icon} />
-                            <img src={assets.mic_icon} />
                             {input&&<img onClick={() => onSent()} src={assets.send_icon} />}
                             
                         </div>
